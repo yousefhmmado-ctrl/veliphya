@@ -74,12 +74,6 @@ h1 span:nth-child(2) { animation-delay: .55s; }
 .lead b { color: var(--fg); font-weight: 500; }
 .cta { display: flex; flex-wrap: wrap; gap: 26px; align-items: center; justify-content: center; animation: rise 1s .95s both; }
 
-/* marquee */
-.marquee { overflow: hidden; border-block: 1px solid var(--line); padding-block: 26px; }
-.marquee div { display: flex; width: max-content; animation: scroll 36s linear infinite; }
-.marquee span { font-size: clamp(34px, 6vw, 76px); font-weight: 600; letter-spacing: -.03em; white-space: nowrap; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.28); padding-inline: .35em; }
-.marquee span:nth-child(odd) { -webkit-text-stroke: 0; background: var(--metal); -webkit-background-clip: text; background-clip: text; }
-@keyframes scroll { to { transform: translateX(-50%); } }
 
 /* sections */
 section { padding-block: clamp(90px, 12vw, 160px); }
@@ -200,6 +194,6 @@ footer svg { width: 18px; height: 20px; }
 @media (prefers-reduced-motion: reduce) {
   /* keep fades, shine and counters; drop only the large movement */
   html { scroll-behavior: auto; }
-  .orb, .emblem i, .marquee div, .float { animation: none; }
+  .orb, .emblem i, .float { animation: none; }
   .js .reveal { transform: none; }
 }
