@@ -198,8 +198,8 @@ footer svg { width: 18px; height: 20px; }
 }
 @media (max-width: 480px) { .socials { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) {
+  /* keep fades, shine and counters; drop only the large movement */
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js .reveal { opacity: 1; transform: none; }
-  .steps li::before { transform: none; }
+  .orb, .emblem i, .marquee div, .float { animation: none; }
+  .js .reveal { transform: none; }
 }
